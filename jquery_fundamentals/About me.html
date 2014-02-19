@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>About Me</title>
+  <style>
+     .listitem {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>About Me</h1>
+  
+  <ul>
+    <li>Nickname: <span id="nickname"></span>
+    <li>Favorites:  <span id="favorites"></span>
+    <li>Hometown: <span id="hometown"></span>
+   </ul>
+  
+  <script>
+   document.body.style.fontFamily = 'Arial, sans-serif';
+   document.getElementById('nickname').innerHTML = 'Bobo';
+   document.getElementById('favorites').innerHTML = 'Pool,  tennis , chess ,video games';
+   document.getElementById('hometown').innerHTML = 'Toronto, CA';
+   var ListItems = document.getElementsByTagName('li');
+   for (var i = 0; i < ListItems.length; i++) {
+      ListItems[i].className = 'listitem';
+   }
+    
+    var myPic = document.createElement('img');
+    myPic.src = 'http://images2.fanpop.com/images/photos/6300000/Lara-Croft-tomb-raider-6374221-1280-1024.jpg';
+    document.body.appendChild(myPic);
+  </script>
+</body>
+</html>
